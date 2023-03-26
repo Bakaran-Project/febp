@@ -25,8 +25,8 @@
 }
 $textcolor : #3F5370;
 $blue : #7195CA;
-$hijau : #86E3CE;
-$merah : #FE8A8A;
+$green : #86E3CE;
+$red : #FE8A8A;
 $monrope : monrope;
 *{
     padding: 0;
@@ -34,6 +34,9 @@ $monrope : monrope;
     box-sizing: border-box;
     color: $textcolor;
     font-family: $monrope;
+}
+body{
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -77,7 +80,7 @@ main{
             position: relative;
             top: 1cm;
             span{
-                color: $hijau;
+                color: $green;
                 img{
                     position: absolute;
                     top: 3cm;
@@ -109,6 +112,12 @@ main{
             margin-top: 1cm;
             p{
                 color: white;
+            }
+            img.bg{
+                position:absolute;
+                width: 8cm;
+                margin-left: 10cm;
+                margin-top: -2cm;
             }
         }
         .content{
@@ -159,10 +168,252 @@ main{
             background-color: $blue;
         }
         .mobile {
-            background-color: $hijau;
+            background-color: $green;
         }
         .design {
-            background-color: $merah;
+            background-color: $red;
+        }
+    }
+    section#our-works{
+        margin-top: 3cm;
+        @include flexcenter();
+        h1.title{
+            color: $blue;
+            font-weight: bold;
+            font-size: 48px;
+            text-align: center;
+        }
+        p.desc{
+            font-size: 32px;
+            font-weight: 700;
+            color: $textcolor;
+            text-align: center;
+        }
+        .projects{
+            width: 100%;
+            @include flexaround();
+            .card{
+                width: 30%;
+                box-shadow: 9px 10px 24px 0px rgba(0,0,0,0.58);
+                -webkit-box-shadow: 9px 10px 24px 0px rgba(0,0,0,0.58);
+                -moz-box-shadow: 9px 10px 24px 0px rgba(0,0,0,0.58);
+                border-radius: 20px;
+                margin-top: 1cm;
+                img{
+                    width: 100%;
+                }
+                .content{
+                    padding: .5cm;
+                    padding-bottom: 1cm;
+                    h1{
+                        margin-top: .2cm;
+                        font-size: 32px;
+                    }
+                    p{
+                        margin-top: .2cm;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        a.button{
+            background-color: $blue;
+            color: white;
+            font-weight: bold;
+            padding: .3cm 3cm;
+            border-radius: 20px;
+            margin-top: 2cm;
+        }
+    }
+    section#our-team{
+        margin-top: 3cm;
+        @include flexcenter();
+        background-color: #9DBFF1;
+        padding-bottom: 5cm;
+        h1.title{
+            color: white;
+            font-weight: bold;
+            font-size: 48px;
+            text-align: center;
+            margin-top: 2cm;
+        }
+        p.desc{
+            font-size: 32px;
+            font-weight: 700;
+            color: $textcolor;
+            text-align: center;
+        }
+        .heading1{
+            width: 70%;
+            @include flexbetween();
+            margin-top: 2cm;
+            margin-bottom: 1cm;
+            hr{
+                width: 35%;
+                color: white;
+                border: 1px solid white;
+            }
+            p{
+                width: 30%;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+            }
+        }
+        .heading2{
+            width: 70%;
+            @include flexbetween();
+            margin-top: 2cm;
+            margin-bottom: 1cm;
+            hr{
+                width: 30%;
+                color: white;
+                border: 1px solid white;
+            }
+            p{
+                width: 35%;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+            }
+        }
+        .cards{
+            width: 100%;
+            @include flexaround();
+            .card{
+                width: 30%;
+                @include flexbetween();
+                padding: .5cm;
+                border-radius: 20px;
+                .right{
+                    width: 70%;
+                    p{
+                        font-size: 18px;
+                        color: white;
+                    }
+                    p.name{
+                        font-weight: bold;
+                    }
+                    p.job{
+                        margin-top: .3cm;
+                        font-weight: lighter;
+                    }
+                    .medsos{
+                        width: 40%;
+                        margin-top: .3cm;
+                        @include flexbetween();
+                    }
+                }
+            }
+            .green{
+                background-color: $green;
+            }
+            .red {
+                background-color: $red;
+            }
+            .blue{
+                background-color: $blue;
+            }
+        }
+    }
+    section#contact{
+        background-color: #3F5370;
+        @include flexcenter();
+        padding: 1cm 2.5cm;
+        padding-bottom: 2cm;
+        .top{
+            width: 100%;
+            @include flexbetween();
+            .left{
+                width: 50%;
+                position: relative;
+                top: -.8cm;
+                h1.name{
+                    color: white;
+                    font-size: 36px;
+                    font-weight: bold;
+                    width: 100%;
+                    align-self: flex-start;
+                }
+                p.address{
+                    margin-top: 1cm;
+                    font-size: 18px;
+                    color : #7195CA;
+                }
+                .mini-nav{
+                    margin-top: 1cm;
+                    width: 60%;
+                    @include flexbetween();
+                    .content{
+                        display: flex;
+                        flex-direction: column;
+                        h1{
+                            font-weight: bold;
+                            color : white;
+                            font-size: 18px;
+                        }
+                        a{
+                            color: #7195CA;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .right{
+                width: 50%;
+                h1{
+                    color: white;
+                    font-size: 36px;
+                }
+                form{
+                    input{
+                        width: 90%;
+                        height: 1.2cm;
+                        background-color: transparent;
+                        border: 1px solid white;
+                        border-radius: 10px;
+                        margin-top: .5cm;
+                        padding-left: .5cm;
+                    }
+                    input.height{
+                        height: 3cm;
+                    }
+                    input::placeholder{
+                        color: white;
+                        font-family: $monrope;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                    button{
+                        width: 90%;
+                        height: 1.1cm;
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 20px;
+                        font-family: $monrope;
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin-top: .5cm;
+                    }
+                }
+            }
+        }
+        hr{
+            width: 100%;
+            border: .2px solid rgba(255, 255, 255, 0.552);
+            margin-top: 1cm;
+            margin-bottom: 1cm;
+        }
+        .bottom{
+            width: 100%;
+            @include flexbetween();
+            h1{
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+            }
         }
     }
 }
