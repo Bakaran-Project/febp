@@ -1,0 +1,168 @@
+@mixin flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+@mixin flexbetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@mixin flexaround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@font-face {
+    font-family: monrope;
+    src: url('/assets/fonts/manrope.ttf');
+}
+$textcolor : #3F5370;
+$blue : #7195CA;
+$hijau : #86E3CE;
+$merah : #FE8A8A;
+$monrope : monrope;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $textcolor;
+    font-family: $monrope;
+}
+a{
+    text-decoration: none;
+}
+header {
+    @include flexbetween();
+    padding: .2cm;
+    img.iconbp{
+        width: 1.5cm;
+    }
+    nav{
+        width: 40%;
+        @include flexbetween();
+        a{
+            @include flexbetween();
+        }
+        a.active{
+            border-bottom: 3px solid $textcolor;
+        }
+    }
+    a.login{
+        background-color: $blue;
+        padding: .3cm .7cm;
+        font-weight: bold;
+        color: white;
+        border-radius: 25px;
+    }
+}
+main{
+    section#home{
+        width: 100%;
+        background-color: $blue;
+        @include flexcenter();
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        h1.header{
+            font-size: 48px;
+            color: white;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            top: 1cm;
+            span{
+                color: $hijau;
+                img{
+                    position: absolute;
+                    top: 3cm;
+                    left: 18.2cm;
+                }
+            }
+        }
+        a.button{
+            background-color: #7EA5E0;
+            margin-top: 2cm;
+            padding: .3cm .7cm;
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+        }
+        img.hero-image{
+            width: 40%;
+            margin-top: -2cm;
+            position: relative;
+            left: -.7cm;
+        }
+    }
+    section#services{
+        @include flexaround();  
+        margin-top: 3cm;      
+        .card{
+            width: 40%;
+            height: 220px;
+            margin-top: 1cm;
+            p{
+                color: white;
+            }
+        }
+        .content{
+            h1{
+                color: $blue;
+                font-size: 48px;
+                font-weight: bolder;
+            }
+            p{
+                font-size: 32px;
+                color: $textcolor;
+            }
+        }
+        .card:not(.content){
+            padding: .5cm;
+            @include flexcenter();
+            border-radius: 20px;
+            .top{
+                width: 100%;
+                @include flexbetween();
+                p{
+                    font-size: 30px;
+                    font-weight: bolder;
+                }
+                img.icon{
+                    width: 1.2cm
+                }
+            }
+            .bottom{
+                @include flexbetween();
+                margin-top: 1cm;
+                p{
+                    width: 70%;
+                    font-size: 18px;
+
+                }
+                a.order{
+                    padding: .2cm .9cm;
+                    border: 2px solid white;
+                    color: white;
+                    border-radius: 20px;
+                    position: relative;
+                    top: 1cm;
+                }
+            }
+        }
+        .web{
+            background-color: $blue;
+        }
+        .mobile {
+            background-color: $hijau;
+        }
+        .design {
+            background-color: $merah;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+@font-face {
+  font-family: monrope;
+  src: url("/assets/fonts/manrope.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #3F5370;
+  font-family: monrope;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.2cm;
+}
+header img.iconbp {
+  width: 1.5cm;
+}
+header nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header nav a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header nav a.active {
+  border-bottom: 3px solid #3F5370;
+}
+header a.login {
+  background-color: #7195CA;
+  padding: 0.3cm 0.7cm;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
+}
+
+main section#home {
+  width: 100%;
+  background-color: #7195CA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+main section#home h1.header {
+  font-size: 48px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 1cm;
+}
+main section#home h1.header span {
+  color: #86E3CE;
+}
+main section#home h1.header span img {
+  position: absolute;
+  top: 3cm;
+  left: 18.2cm;
+}
+main section#home a.button {
+  background-color: #7EA5E0;
+  margin-top: 2cm;
+  padding: 0.3cm 0.7cm;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+}
+main section#home img.hero-image {
+  width: 40%;
+  margin-top: -2cm;
+  position: relative;
+  left: -0.7cm;
+}
+main section#services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3cm;
+}
+main section#services .card {
+  width: 40%;
+  height: 220px;
+  margin-top: 1cm;
+}
+main section#services .card p {
+  color: white;
+}
+main section#services .content h1 {
+  color: #7195CA;
+  font-size: 48px;
+  font-weight: bolder;
+}
+main section#services .content p {
+  font-size: 32px;
+  color: #3F5370;
+}
+main section#services .card:not(.content) {
+  padding: 0.5cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+main section#services .card:not(.content) .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main section#services .card:not(.content) .top p {
+  font-size: 30px;
+  font-weight: bolder;
+}
+main section#services .card:not(.content) .top img.icon {
+  width: 1.2cm;
+}
+main section#services .card:not(.content) .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1cm;
+}
+main section#services .card:not(.content) .bottom p {
+  width: 70%;
+  font-size: 18px;
+}
+main section#services .card:not(.content) .bottom a.order {
+  padding: 0.2cm 0.9cm;
+  border: 2px solid white;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  top: 1cm;
+}
+main section#services .web {
+  background-color: #7195CA;
+}
+main section#services .mobile {
+  background-color: #86E3CE;
+}
+main section#services .design {
+  background-color: #FE8A8A;
+}/*# sourceMappingURL=index.css.map */
