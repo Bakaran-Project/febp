@@ -37,6 +37,16 @@ header nav {
   flex-direction: row;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 768px) {
+  header nav {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 512px) {
+  header nav {
+    display: none;
+  }
+}
 header nav a {
   display: flex;
   justify-content: space-between;
@@ -66,6 +76,11 @@ main section#home {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
+@media only screen and (max-width: 768px) {
+  main section#home {
+    height: 100vh;
+  }
+}
 main section#home h1.header {
   font-size: 48px;
   color: white;
@@ -73,6 +88,17 @@ main section#home h1.header {
   text-align: center;
   position: relative;
   top: 1cm;
+}
+@media only screen and (max-width: 768px) {
+  main section#home h1.header {
+    top: 0%;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#home h1.header {
+    font-size: 40px;
+    margin-top: -2cm;
+  }
 }
 main section#home h1.header span {
   color: #86E3CE;
@@ -82,6 +108,16 @@ main section#home h1.header span img {
   top: 3cm;
   left: 18.2cm;
 }
+@media only screen and (max-width: 768px) {
+  main section#home h1.header span img {
+    left: 10.5cm;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#home h1.header span img {
+    display: none;
+  }
+}
 main section#home a.button {
   background-color: #7EA5E0;
   margin-top: 2cm;
@@ -90,11 +126,28 @@ main section#home a.button {
   font-weight: bold;
   border-radius: 30px;
 }
+@media only screen and (max-width: 768px) {
+  main section#home a.button {
+    margin-top: 1cm;
+  }
+}
 main section#home img.hero-image {
   width: 40%;
   margin-top: -2cm;
   position: relative;
   left: -0.7cm;
+}
+@media only screen and (max-width: 768px) {
+  main section#home img.hero-image {
+    margin-top: 0%;
+    width: 60%;
+    left: -0.45cm;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#home img.hero-image {
+    width: 90%;
+  }
 }
 main section#services {
   display: flex;
@@ -103,11 +156,23 @@ main section#services {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 3cm;
+  width: 100vw;
+  overflow-x: hidden;
 }
 main section#services .card {
   width: 40%;
   height: 220px;
   margin-top: 1cm;
+}
+@media only screen and (max-width: 768px) {
+  main section#services .card {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#services .card {
+    width: 90%;
+  }
 }
 main section#services .card p {
   color: white;
@@ -118,14 +183,46 @@ main section#services .card img.bg {
   margin-left: 10cm;
   margin-top: -2cm;
 }
+@media only screen and (max-width: 512px) {
+  main section#services .card img.bg {
+    display: none;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#services .content {
+    margin-bottom: -3cm;
+  }
+}
 main section#services .content h1 {
   color: #7195CA;
   font-size: 48px;
   font-weight: bolder;
 }
+@media only screen and (max-width: 768px) {
+  main section#services .content h1 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#services .content h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+}
 main section#services .content p {
   font-size: 32px;
   color: #3F5370;
+}
+@media only screen and (max-width: 768px) {
+  main section#services .content p {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#services .content p {
+    text-align: center;
+    font-size: 20px;
+  }
 }
 main section#services .card:not(.content) {
   padding: 0.5cm;
@@ -148,8 +245,18 @@ main section#services .card:not(.content) .top p {
   font-size: 30px;
   font-weight: bolder;
 }
+@media only screen and (max-width: 768px) {
+  main section#services .card:not(.content) .top p {
+    font-size: 25px;
+  }
+}
 main section#services .card:not(.content) .top img.icon {
   width: 1.2cm;
+}
+@media only screen and (max-width: 768px) {
+  main section#services .card:not(.content) .top img.icon {
+    width: 1cm;
+  }
 }
 main section#services .card:not(.content) .bottom {
   display: flex;
@@ -159,9 +266,22 @@ main section#services .card:not(.content) .bottom {
   flex-wrap: wrap;
   margin-top: 1cm;
 }
+@media only screen and (max-width: 768px) {
+  main section#services .card:not(.content) .bottom {
+    width: 100%;
+    margin-top: 0%;
+  }
+}
 main section#services .card:not(.content) .bottom p {
   width: 70%;
   font-size: 18px;
+}
+@media only screen and (max-width: 768px) {
+  main section#services .card:not(.content) .bottom p {
+    font-size: 15px;
+    width: 90%;
+    margin-top: 0.2cm;
+  }
 }
 main section#services .card:not(.content) .bottom a.order {
   padding: 0.2cm 0.9cm;
@@ -170,6 +290,12 @@ main section#services .card:not(.content) .bottom a.order {
   border-radius: 20px;
   position: relative;
   top: 1cm;
+}
+@media only screen and (max-width: 768px) {
+  main section#services .card:not(.content) .bottom a.order {
+    padding: 0.2cm 0.5cm;
+    top: 0.5cm;
+  }
 }
 main section#services .web {
   background-color: #7195CA;
@@ -194,11 +320,31 @@ main section#our-works h1.title {
   font-size: 48px;
   text-align: center;
 }
+@media only screen and (max-width: 768px) {
+  main section#our-works h1.title {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#our-works h1.title {
+    font-size: 25px;
+  }
+}
 main section#our-works p.desc {
   font-size: 32px;
   font-weight: 700;
   color: #3F5370;
   text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  main section#our-works p.desc {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#our-works p.desc {
+    font-size: 20px;
+  }
 }
 main section#our-works .projects {
   width: 100%;
@@ -216,6 +362,16 @@ main section#our-works .projects .card {
   border-radius: 20px;
   margin-top: 1cm;
 }
+@media only screen and (max-width: 768px) {
+  main section#our-works .projects .card {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#our-works .projects .card {
+    width: 90%;
+  }
+}
 main section#our-works .projects .card img {
   width: 100%;
 }
@@ -226,6 +382,11 @@ main section#our-works .projects .card .content {
 main section#our-works .projects .card .content h1 {
   margin-top: 0.2cm;
   font-size: 32px;
+}
+@media only screen and (max-width: 768px) {
+  main section#our-works .projects .card .content h1 {
+    font-size: 25px;
+  }
 }
 main section#our-works .projects .card .content p {
   margin-top: 0.2cm;
@@ -239,6 +400,16 @@ main section#our-works a.button {
   border-radius: 20px;
   margin-top: 2cm;
 }
+@media only screen and (max-width: 768px) {
+  main section#our-works a.button {
+    padding: 0.3cm 5cm;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#our-works a.button {
+    padding: 0.3cm 3cm;
+  }
+}
 main section#our-team {
   margin-top: 3cm;
   display: flex;
@@ -247,6 +418,8 @@ main section#our-team {
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #9DBFF1;
+  border-radius: 79% 8% 25% 25%/6% 6% 0% 0%;
+  background-image: url("/assets/images/teams/bg.png");
   padding-bottom: 5cm;
 }
 main section#our-team h1.title {
@@ -256,11 +429,21 @@ main section#our-team h1.title {
   text-align: center;
   margin-top: 2cm;
 }
+@media only screen and (max-width: 768px) {
+  main section#our-team h1.title {
+    font-size: 40px;
+  }
+}
 main section#our-team p.desc {
   font-size: 32px;
   font-weight: 700;
   color: #3F5370;
   text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  main section#our-team p.desc {
+    font-size: 25px;
+  }
 }
 main section#our-team .heading1 {
   width: 70%;
@@ -272,10 +455,21 @@ main section#our-team .heading1 {
   margin-top: 2cm;
   margin-bottom: 1cm;
 }
+@media only screen and (max-width: 768px) {
+  main section#our-team .heading1 {
+    width: 90%;
+  }
+}
 main section#our-team .heading1 hr {
   width: 35%;
   color: white;
   border: 1px solid white;
+}
+@media only screen and (max-width: 512px) {
+  main section#our-team .heading1 hr {
+    width: 15%;
+    visibility: hidden;
+  }
 }
 main section#our-team .heading1 p {
   width: 30%;
@@ -283,6 +477,16 @@ main section#our-team .heading1 p {
   font-size: 24px;
   font-weight: bold;
   color: white;
+}
+@media only screen and (max-width: 768px) {
+  main section#our-team .heading1 p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#our-team .heading1 p {
+    width: 70%;
+  }
 }
 main section#our-team .heading2 {
   width: 70%;
@@ -294,17 +498,38 @@ main section#our-team .heading2 {
   margin-top: 2cm;
   margin-bottom: 1cm;
 }
+@media only screen and (max-width: 768px) {
+  main section#our-team .heading2 {
+    width: 90%;
+  }
+}
 main section#our-team .heading2 hr {
   width: 30%;
   color: white;
   border: 1px solid white;
 }
+@media only screen and (max-width: 512px) {
+  main section#our-team .heading2 hr {
+    width: 15%;
+    visibility: hidden;
+  }
+}
 main section#our-team .heading2 p {
-  width: 35%;
+  width: 40%;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   color: white;
+}
+@media only screen and (max-width: 768px) {
+  main section#our-team .heading2 p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#our-team .heading2 p {
+    width: 70%;
+  }
 }
 main section#our-team .cards {
   width: 100%;
@@ -313,6 +538,17 @@ main section#our-team .cards {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+main section#our-team .cards img.bg {
+  position: absolute;
+  width: 4cm;
+  margin-left: 6.2cm;
+  z-index: 1;
+}
+@media only screen and (max-width: 512px) {
+  main section#our-team .cards img.bg {
+    display: none;
+  }
 }
 main section#our-team .cards .card {
   width: 30%;
@@ -323,6 +559,17 @@ main section#our-team .cards .card {
   flex-wrap: wrap;
   padding: 0.5cm;
   border-radius: 20px;
+}
+@media only screen and (max-width: 768px) {
+  main section#our-team .cards .card {
+    width: 45%;
+    margin-top: 1cm;
+  }
+}
+@media only screen and (max-width: 512px) {
+  main section#our-team .cards .card {
+    width: 90%;
+  }
 }
 main section#our-team .cards .card .right {
   width: 70%;
@@ -347,6 +594,11 @@ main section#our-team .cards .card .right .medsos {
   flex-direction: row;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 768px) {
+  main section#our-team .cards .card .right .medsos {
+    width: 80%;
+  }
+}
 main section#our-team .cards .green {
   background-color: #86E3CE;
 }
@@ -366,6 +618,11 @@ main section#contact {
   padding: 1cm 2.5cm;
   padding-bottom: 2cm;
 }
+@media only screen and (max-width: 512px) {
+  main section#contact {
+    padding: 0.5cm;
+  }
+}
 main section#contact .top {
   width: 100%;
   display: flex;
@@ -374,10 +631,22 @@ main section#contact .top {
   flex-direction: row;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 768px) {
+  main section#contact .top {
+    flex-direction: column-reverse;
+  }
+}
 main section#contact .top .left {
   width: 50%;
   position: relative;
   top: -0.8cm;
+}
+@media only screen and (max-width: 768px) {
+  main section#contact .top .left {
+    width: 100%;
+    top: 0;
+    margin-top: 1cm;
+  }
 }
 main section#contact .top .left h1.name {
   color: white;
@@ -415,6 +684,11 @@ main section#contact .top .left .mini-nav .content a {
 }
 main section#contact .top .right {
   width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  main section#contact .top .right {
+    width: 100%;
+  }
 }
 main section#contact .top .right h1 {
   color: white;

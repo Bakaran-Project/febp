@@ -50,6 +50,12 @@ header {
     nav{
         width: 40%;
         @include flexbetween();
+        @media only screen and (max-width: 768px) {
+            width: 50%;
+        }
+        @media only screen and (max-width: 512px) {
+            display: none;
+        }
         a{
             @include flexbetween();
         }
@@ -72,6 +78,9 @@ main{
         @include flexcenter();
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
+        @media only screen and (max-width: 768px) {
+            height: 100vh;
+        }
         h1.header{
             font-size: 48px;
             color: white;
@@ -79,12 +88,25 @@ main{
             text-align: center;
             position: relative;
             top: 1cm;
+            @media only screen and (max-width: 768px) {
+                top: 0%;
+            }
+            @media only screen and (max-width: 512px) {
+                font-size: 40px;
+                margin-top: -2cm;
+            }
             span{
                 color: $green;
                 img{
                     position: absolute;
                     top: 3cm;
                     left: 18.2cm;
+                    @media only screen and (max-width: 768px) {
+                        left: 10.5cm;
+                    }
+                    @media only screen and (max-width: 512px) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -95,21 +117,40 @@ main{
             color: white;
             font-weight: bold;
             border-radius: 30px;
+            @media only screen and (max-width: 768px) {
+                margin-top: 1cm;
+            }
         }
         img.hero-image{
             width: 40%;
             margin-top: -2cm;
             position: relative;
             left: -.7cm;
+            @media only screen and (max-width: 768px) {
+                margin-top: 0%;
+                width: 60%;
+                left: -.45cm;
+            }
+            @media only screen and (max-width: 512px) {
+                width: 90%;
+            }
         }
     }
     section#services{
         @include flexaround();  
         margin-top: 3cm;      
+        width: 100vw;
+        overflow-x: hidden;
         .card{
             width: 40%;
             height: 220px;
             margin-top: 1cm;
+            @media only screen and (max-width: 768px) {
+                width: 45%;
+            }
+            @media only screen and (max-width: 512px) {
+                width: 90%;
+            }
             p{
                 color: white;
             }
@@ -118,17 +159,37 @@ main{
                 width: 8cm;
                 margin-left: 10cm;
                 margin-top: -2cm;
+                @media only screen and (max-width: 512px) {
+                    display: none;
+                }
             }
         }
         .content{
+            @media only screen and (max-width: 512px) {
+                margin-bottom: -3cm;
+            }
             h1{
                 color: $blue;
                 font-size: 48px;
                 font-weight: bolder;
+                @media only screen and (max-width: 768px) {
+                    font-size: 40px;
+                }
+                @media only screen and (max-width: 512px) {
+                    text-align: center;
+                    font-size: 30px;
+                }
             }
             p{
                 font-size: 32px;
                 color: $textcolor;
+                @media only screen and (max-width: 768px) {
+                    font-size: 25px;
+                }
+                @media only screen and (max-width: 512px) {
+                    text-align: center;
+                    font-size: 20px;
+                }
             }
         }
         .card:not(.content){
@@ -141,18 +202,32 @@ main{
                 p{
                     font-size: 30px;
                     font-weight: bolder;
+                    @media only screen and (max-width: 768px) {
+                        font-size: 25px;
+                    }
                 }
                 img.icon{
-                    width: 1.2cm
+                    width: 1.2cm;
+                    @media only screen and (max-width: 768px) {
+                        width: 1cm;
+                    }
                 }
             }
             .bottom{
                 @include flexbetween();
                 margin-top: 1cm;
+                @media only screen and (max-width: 768px) {
+                    width: 100%;
+                    margin-top: 0%;
+                }
                 p{
                     width: 70%;
                     font-size: 18px;
-
+                    @media only screen and (max-width: 768px) {
+                        font-size: 15px;
+                        width: 90%;
+                        margin-top: .2cm;
+                    }
                 }
                 a.order{
                     padding: .2cm .9cm;
@@ -161,6 +236,10 @@ main{
                     border-radius: 20px;
                     position: relative;
                     top: 1cm;
+                    @media only screen and (max-width: 768px) {
+                        padding: .2cm .5cm;
+                        top: .5cm;
+                    }
                 }
             }
         }
@@ -182,12 +261,24 @@ main{
             font-weight: bold;
             font-size: 48px;
             text-align: center;
+            @media only screen and (max-width: 768px) {
+                font-size: 40px;
+            }
+            @media only screen and (max-width: 512px) {
+                font-size: 25px;
+            }
         }
         p.desc{
             font-size: 32px;
             font-weight: 700;
             color: $textcolor;
             text-align: center;
+            @media only screen and (max-width: 768px) {
+                font-size: 25px;
+            }
+            @media only screen and (max-width: 512px) {
+                font-size: 20px;
+            }
         }
         .projects{
             width: 100%;
@@ -199,6 +290,12 @@ main{
                 -moz-box-shadow: 9px 10px 24px 0px rgba(0,0,0,0.58);
                 border-radius: 20px;
                 margin-top: 1cm;
+                @media only screen and (max-width: 768px) {
+                    width: 45%;
+                }
+                @media only screen and (max-width: 512px) {
+                    width: 90%;
+                }
                 img{
                     width: 100%;
                 }
@@ -208,6 +305,9 @@ main{
                     h1{
                         margin-top: .2cm;
                         font-size: 32px;
+                        @media only screen and (max-width: 768px) {
+                            font-size: 25px;
+                        }
                     }
                     p{
                         margin-top: .2cm;
@@ -223,12 +323,20 @@ main{
             padding: .3cm 3cm;
             border-radius: 20px;
             margin-top: 2cm;
+            @media only screen and (max-width: 768px) {
+                padding: .3cm 5cm;
+            }
+            @media only screen and (max-width: 512px) {
+                padding: .3cm 3cm;
+            }
         }
     }
     section#our-team{
         margin-top: 3cm;
         @include flexcenter();
         background-color: #9DBFF1;
+        border-radius: 79% 8% 25% 25% / 6% 6% 0% 0%;
+        background-image: url('/assets/images/teams/bg.png');
         padding-bottom: 5cm;
         h1.title{
             color: white;
@@ -236,22 +344,35 @@ main{
             font-size: 48px;
             text-align: center;
             margin-top: 2cm;
+            @media only screen and (max-width: 768px) {
+                font-size: 40px;
+            }
         }
         p.desc{
             font-size: 32px;
             font-weight: 700;
             color: $textcolor;
             text-align: center;
+            @media only screen and (max-width: 768px) {
+                font-size: 25px;
+            }
         }
         .heading1{
             width: 70%;
             @include flexbetween();
             margin-top: 2cm;
             margin-bottom: 1cm;
+            @media only screen and (max-width: 768px) {
+                width: 90%;
+            }
             hr{
                 width: 35%;
                 color: white;
                 border: 1px solid white;
+                @media only screen and (max-width: 512px) {
+                    width: 15%;
+                    visibility: hidden;
+                }
             }
             p{
                 width: 30%;
@@ -259,6 +380,12 @@ main{
                 font-size: 24px;
                 font-weight: bold;
                 color: white;
+                @media only screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
+                @media only screen and (max-width: 512px) {
+                    width: 70%;
+                }
             }
         }
         .heading2{
@@ -266,27 +393,56 @@ main{
             @include flexbetween();
             margin-top: 2cm;
             margin-bottom: 1cm;
+            @media only screen and (max-width: 768px) {
+                width: 90%;
+            }
             hr{
                 width: 30%;
                 color: white;
                 border: 1px solid white;
+                @media only screen and (max-width: 512px) {
+                    width: 15%;
+                    visibility: hidden;
+                }
             }
             p{
-                width: 35%;
+                width: 40%;
                 text-align: center;
                 font-size: 24px;
                 font-weight: bold;
                 color: white;
+                @media only screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
+                @media only screen and (max-width: 512px) {
+                    width: 70%;
+                }
             }
         }
         .cards{
             width: 100%;
             @include flexaround();
+            img.bg{
+                position:absolute;
+                width: 4cm;
+                margin-left: 6.2cm;
+                z-index: 1;
+                @media only screen and (max-width: 512px) {
+                    display: none;
+                }
+            }
             .card{
                 width: 30%;
                 @include flexbetween();
                 padding: .5cm;
                 border-radius: 20px;
+                @media only screen and (max-width: 768px) {
+                    width: 45%;
+                    margin-top: 1cm;
+                }
+                @media only screen and (max-width: 512px) {
+                    width: 90%;
+                }
                 .right{
                     width: 70%;
                     p{
@@ -304,6 +460,9 @@ main{
                         width: 40%;
                         margin-top: .3cm;
                         @include flexbetween();
+                        @media only screen and (max-width: 768px) {
+                            width: 80%;
+                        }
                     }
                 }
             }
@@ -322,14 +481,25 @@ main{
         background-color: #3F5370;
         @include flexcenter();
         padding: 1cm 2.5cm;
+        @media only screen and (max-width: 512px) {
+            padding: .5cm;
+        }
         padding-bottom: 2cm;
         .top{
             width: 100%;
             @include flexbetween();
+            @media only screen and (max-width: 768px) {
+                flex-direction: column-reverse;
+            }
             .left{
                 width: 50%;
                 position: relative;
                 top: -.8cm;
+                @media only screen and (max-width: 768px) {
+                    width: 100%;
+                    top: 0;
+                    margin-top: 1cm;
+                }
                 h1.name{
                     color: white;
                     font-size: 36px;
@@ -363,6 +533,9 @@ main{
             }
             .right{
                 width: 50%;
+                @media only screen and (max-width: 768px) {
+                    width: 100%;
+                }
                 h1{
                     color: white;
                     font-size: 36px;
